@@ -8,11 +8,10 @@ import argparse
 
 def get_outline(img_path):
     # 画像を読み込む
-    img_path = args.img_path
     img = cv2.imread(img_path)
 
     height, width, _ = img.shape
-    print(f"shape : {height}, {width}")
+    #print(f"shape : {height}, {width}")
     img = img[0:int(height/2)]
 
     '''
@@ -34,12 +33,12 @@ def get_outline(img_path):
     # 各輪郭を囲む長方形領域を抽出
     extracted_regions = []
     for contour in contours:
-        print("hey")
+        #print("hey")
         if cv2.contourArea(contour) > 100:  # ノイズを除去するために面積の閾値を設定
             x, y, w, h = cv2.boundingRect(contour)
             if (w*h) / (height*width) < 0.1:
                 continue
-            print((w*h) / (height*width))
+            #print((w*h) / (height*width))
             extracted_region = img[y:y+h, x:x+w]
             extracted_regions.append(extracted_region)
             # 抽出した領域をデバッグ用に表示するために長方形を描画
@@ -50,12 +49,13 @@ def get_outline(img_path):
     output_region_path = \
         os.path.join("mask",os.path.basename(img_path))
     cv2.imwrite(output_region_path, region)
-
+'''
 parser = argparse.ArgumentParser()
 parser.add_argument("img_path", help="raw_img_path is needed")
 args = parser.parse_args()
 
 get_outline(args.img_path)
+'''
 '''
 # 結果の画像を保存
 output_image_path = 'detected_regions.jpg'
