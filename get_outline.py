@@ -39,12 +39,12 @@ def get_outline(img_path):
             if (w*h) / (height*width) < 0.1:
                 continue
             #print((w*h) / (height*width))
-            extracted_region = img[y:y+h, x:x+w]
+            extracted_region = cv2.resize(img[y+5:y+h-5, x+5:x+w-5], (256,256))
             extracted_regions.append(extracted_region)
             # 抽出した領域をデバッグ用に表示するために長方形を描画
             # cv2.rectangle(img, (x, y), (x+w, y+h), (0, 255, 0), 2)
 
-    # 抽出した領域を保存または表示
+    # 抽出した領域を保存または表示a
     region = extracted_regions[0]
     output_region_path = \
         os.path.join("mask",os.path.basename(img_path))
