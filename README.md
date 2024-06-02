@@ -30,4 +30,4 @@ $ python concat_ship_whmark.py
 ```
 $ python display_data.py
 ```
-`whole_data.json`から相手が各マスに船を置いた回数をそれぞれ記録し、ヒートマップ画像としてsum_data_canvas.jpgに出力
+`whole_data.json`から相手が各マスに船を置いた回数をそれぞれ記録し、ヒートマップ画像としてsum_data_canvas.jpgに出力されます。
