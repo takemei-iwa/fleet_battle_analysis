@@ -26,7 +26,7 @@ $ python concat_ship_whmark.py
 ```
 `ship_point`ディレクトリと`white_mark_point`ディレクトリのファイルから、船の座標だけを抽出し、Fleet_Battle_Analysisディレクトリ直下に`whole_data.json`として出力されます。
 
-### 10個の対戦結果から統計をとった、ヒートマップ画像を取得
+### 対戦結果から統計をとったヒートマップ画像を取得
 ```
 $ python display_data.py
 ```
