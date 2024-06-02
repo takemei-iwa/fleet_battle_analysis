@@ -102,7 +102,7 @@ def get_ship_point(img_path):
     points=[]
 
     
-    cv2.imwrite(f"white+{os.path.basename(img_path)}.jpg", img[189:200,214:225])         
+    
     sum = 0
     for x in range(0,10):
         for y in range(0,10):
