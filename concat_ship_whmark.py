@@ -16,22 +16,16 @@ def get_ship_data(ship_point_path, white_mark_point_path):
     with open(white_mark_point_path, 'r', encoding='utf-8') as json_file:
         whmarks = json.load(json_file)    
 
-    print(ships)
-    print(whmarks)
-
     data=[]
     for ship in ships:
         cont = False
-        print("a")
         for whmark in whmarks:
-            print(f"{whmark['x']}, {whmark['y']} {ship['x']}, {ship['y']}")
             if whmark['x'] == ship['x'] and \
                 whmark['y'] == ship['y']:
                 cont = True
                 break
         if cont :
             continue
-        print("b")        
         data.append([ship['x'], ship['y']])
 
     return data
