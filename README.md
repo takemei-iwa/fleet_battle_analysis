@@ -20,11 +20,11 @@ $ python allimg2get_outline.py
 ```
 $ python allimg2get_ship_mask.py
 ```
-`mask`ディレクトリの画像から`ship_mask`ディレクトリに船と白いマークのマスク画像が入ります。
-この画像から`ship_point`ディレクトリに、左上を原点としてマス目を座標と見た時の、船と白いマークの座標がjsonファイルとして入ります。
-`mask`ディレクトリの画像から白いマーク
+`mask`ディレクトリの画像から`ship_mask`ディレクトリに船と白いマーク
 ![船と白いマークのマスク画像](https://github.com/takemei-iwa/fleet_battle_analysis/blob/main/wh_template.jpg)
-を検出し、白いマークの座標がjsonファイルとして`white_mark_point`ディレクトリに入ります。
+のマスク画像が入ります。
+この画像から`ship_point`ディレクトリに、左上を原点としてマス目を座標と見た時の、船と白いマークの座標がjsonファイルとして入ります。
+`mask`ディレクトリの画像から白いマークを検出し、白いマークの座標がjsonファイルとして`white_mark_point`ディレクトリに入ります。
 
 下が`ship_point`ディレクトリに入るマスク画像です。
 
