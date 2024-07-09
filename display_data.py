@@ -36,7 +36,7 @@ def draw_grid_with_rectangles(height, width, data):
         for y in range(10):
             count = data[x][y]
             possi = (count - min) / (max - min) * 100
-            print(f"{count}, {possi}")
+            
             if possi >= 75 :
                 r = 250
                 g = int(250 - (possi - 75)/25 * 250)
@@ -61,7 +61,6 @@ def draw_grid_with_rectangles(height, width, data):
 with open(whole_data_path, 'r', encoding='utf-8') as json_file:
         data = json.load(json_file)
 points = sum_data(data)
-print(points)
 canvas = draw_grid_with_rectangles(500,500,points)
 cv2.imwrite("sum_data_canvas.jpg",canvas)
 
